@@ -12,11 +12,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class TempApiPathFileRequestConverter extends ApiPathFileRequestConverterAdapter {
 
-    public static final String PATH = "/file/temp";
+    public static final String API_PREFIX = "/file/temp";
 
     @Override
     protected String getApiPrefix() {
-        return PATH;
+        return API_PREFIX;
     }
 
 }
