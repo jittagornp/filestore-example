@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 public class TempFileUploader extends FileUploaderAdapter {
 
     @Autowired
-    private TempFileManager fileManager;
+    private TempFileManager fileManager; 
 
     @Autowired
     private TempApiPathFileRequestConverter apiPathFileRequestConverter;
