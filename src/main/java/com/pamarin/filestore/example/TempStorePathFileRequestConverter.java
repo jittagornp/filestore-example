@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 public class TempStorePathFileRequestConverter extends StorePathFileRequestConverterAdapter {
 
     @Override
-    protected String getContext() {
+    protected String getContextPath() {
         return "/temp";
     }
 

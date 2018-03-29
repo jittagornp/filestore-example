@@ -12,11 +12,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class TempAccessPathFileRequestConverter extends AccessPathFileRequestConverterAdapter {
 
-    public static final String CONTEXT = "/api/file/temp";
+    public static final String CONTEXT_PATH = "/api/file/temp";
 
     @Override
-    protected String getContext() {
-        return CONTEXT;
+    protected String getContextPath() {
+        return CONTEXT_PATH;
     }
 
 }

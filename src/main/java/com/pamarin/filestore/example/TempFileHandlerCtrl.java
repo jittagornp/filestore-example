@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author jittagornp &lt;http://jittagornp.me&gt; create : 2018/03/28
  */
 @Controller
-@RequestMapping(TempAccessPathFileRequestConverter.CONTEXT)
+@RequestMapping(TempAccessPathFileRequestConverter.CONTEXT_PATH)
 public class TempFileHandlerCtrl extends FileHandlerAdapter {
 
     @Autowired
