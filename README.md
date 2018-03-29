@@ -12,7 +12,8 @@ Http `POST`
 ### Get File
 
 http `GET`
-> /{API_PREFIX}/{createdDate}/{uuid}/{baseName}.{extensionFile}
+> /{API_PREFIX}/{createdDate}/{uuid}/{baseName}.{extensionFile}  
+> /{API_PREFIX}/{createdDate}/{uuid}/{baseName}.{extensionFile}?preview  
 
 ![upload](image/getfile.jpg)
 
