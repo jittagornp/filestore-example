@@ -31,11 +31,6 @@ public class TempFileUploader extends FileUploaderAdapter {
     }
 
     @Override
-    protected String getUserId() {
-        return "1";//TODO : may be get value from SecurityContext
-    }
-
-    @Override
     protected AccessPathFileRequestConverter getAccessPathFileRequestConverter() {
         return accessPathFileRequestConverter;
     }
