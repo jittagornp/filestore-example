@@ -23,7 +23,7 @@ public class TempFileManager extends FileManagerAdapter {
     }
 
     @Override
-    protected StorePathFileRequestConverter getStorePathFileRequestConverter() {
+    public StorePathFileRequestConverter getStorePathFileRequestConverter() {
         return storePathFileRequestConverter;
     }
 
