@@ -3,19 +3,19 @@
  */
 package com.pamarin.filestore.example;
 
-import com.pamarin.filestore.ApiPathFileRequestConverter;
 import com.pamarin.filestore.FileHandlerAdapter;
 import com.pamarin.filestore.FileManager;
 import com.pamarin.filestore.FileUploader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import com.pamarin.filestore.AccessPathFileRequestConverter;
 
 /**
  * @author jittagornp &lt;http://jittagornp.me&gt; create : 2018/03/28
  */
 @Controller
-@RequestMapping(TempApiPathFileRequestConverter.API_PREFIX)
+@RequestMapping(TempAccessPathFileRequestConverter.PREFIX)
 public class TempFileHandlerCtrl extends FileHandlerAdapter {
 
     @Autowired
@@ -25,7 +25,7 @@ public class TempFileHandlerCtrl extends FileHandlerAdapter {
     private TempFileUploader fileUploader;
     
     @Autowired
-    private TempApiPathFileRequestConverter apiPathFileRequestConverter;
+    private TempAccessPathFileRequestConverter accessPathFileRequestConverter;
 
     @Override
     protected FileManager getFileManager() {
@@ -43,8 +43,8 @@ public class TempFileHandlerCtrl extends FileHandlerAdapter {
     }
 
     @Override
-    protected ApiPathFileRequestConverter getApiPathFileRequestConverter() {
-        return apiPathFileRequestConverter;
+    protected AccessPathFileRequestConverter getAccessPathFileRequestConverter() {
+        return accessPathFileRequestConverter;
     }
 
 }
