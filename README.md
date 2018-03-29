@@ -20,7 +20,7 @@ http `GET`
 ### File exist 
 
 http `GET`
-> /{API_PREFIX}/{createdDate}/{uuid}/{baseName}.{extensionFile}/exist 
+> /{API_PREFIX}/{createdDate}/{uuid}/{baseName}.{extensionFile}?exist 
 
 ### Delete File 
 
