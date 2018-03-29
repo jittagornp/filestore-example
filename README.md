@@ -21,11 +21,7 @@ http `GET`
 http `GET`
 > /{API_PREFIX}/{createdDate}/{uuid}/{baseName}.{extensionFile}/exist 
 
-![upload](image/exist.jpg)
-
 ### Delete File 
 
 http `DELETE`
 > /{API_PREFIX}/{createdDate}/{uuid}/{baseName}.{extensionFile}
-
-![upload](image/delete.jpg)
