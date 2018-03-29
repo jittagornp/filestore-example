@@ -12,20 +12,17 @@ Http `POST`
 ### Get File
 
 http `GET`
-> /{API_PREFIX}/{createdDate}/{uuid}.{extensionFile}
+> /{API_PREFIX}/{createdDate}/{uuid}/{baseName}.{extensionFile}  
+> /{API_PREFIX}/{createdDate}/{uuid}/{baseName}.{extensionFile}?preview  
 
-![upload](image/get-file.jpg)
+![upload](image/getfile.jpg)
 
 ### File exist 
 
 http `GET`
-> /{API_PREFIX}/{createdDate}/{uuid}.{extensionFile}/exist 
-
-![upload](image/exist.jpg)
+> /{API_PREFIX}/{createdDate}/{uuid}/{baseName}.{extensionFile}?exist 
 
 ### Delete File 
 
 http `DELETE`
-> /{API_PREFIX}/{createdDate}/{uuid}.{extensionFile}/delete   
-
-![upload](image/delete.jpg)
+> /{API_PREFIX}/{createdDate}/{uuid}/{baseName}.{extensionFile}
