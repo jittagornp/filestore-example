@@ -14,7 +14,7 @@ Http `POST`
 http `GET`
 > /{API_PREFIX}/{createdDate}/{uuid}/{baseName}.{extensionFile}
 
-![upload](image/get-file.jpg)
+![upload](image/getfile.jpg)
 
 ### File exist 
 
