@@ -5,6 +5,7 @@ package com.pamarin.filestore.example;
 
 import com.pamarin.filestore.FileHandlerAdapter;
 import com.pamarin.filestore.FileUploader;
+import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,7 +26,7 @@ public class TempFileHandlerCtrl extends FileHandlerAdapter {
     }
 
     @Override
-    protected String getUserId() {
+    protected String getUserId(HttpServletRequest httpReq) {
         return "1";//TODO : may be get value from SecurityContext
     }
 
