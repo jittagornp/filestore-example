@@ -37,7 +37,7 @@ public class TempFileHandlerCtrl extends FileHandlerAdapter {
     }
 
     @Override
-    public String getShareToken(String userId) {
+    public String signGrantToken(String userId) {
         try {
             Algorithm algorithm = Algorithm.HMAC384(SHARE_SECRET_KEY);
             return JWT.create()
@@ -49,7 +49,7 @@ public class TempFileHandlerCtrl extends FileHandlerAdapter {
     }
 
     @Override
-    public String verifyShareToken(String token) {
+    public String verifyGrantToken(String token) {
         try {
             Algorithm algorithm = Algorithm.HMAC384(SHARE_SECRET_KEY);
             return JWT.require(algorithm)
