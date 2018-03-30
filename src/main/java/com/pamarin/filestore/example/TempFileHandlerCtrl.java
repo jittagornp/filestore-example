@@ -36,13 +36,16 @@ public class TempFileHandlerCtrl extends FileHandlerAdapter {
         return "1";//TODO : may be get value from SecurityContext
     }
 
+    private Algorithm getAlgorithm() throws IllegalArgumentException, UnsupportedEncodingException {
+        return Algorithm.HMAC256(SHARE_SECRET_KEY);
+    }
+
     @Override
     public String signGrantToken(String userId) {
         try {
-            Algorithm algorithm = Algorithm.HMAC384(SHARE_SECRET_KEY);
             return JWT.create()
                     .withIssuer(userId)
-                    .sign(algorithm);
+                    .sign(getAlgorithm());
         } catch (UnsupportedEncodingException | JWTCreationException ex) {
             throw new RuntimeException(ex);
         }
@@ -51,8 +54,7 @@ public class TempFileHandlerCtrl extends FileHandlerAdapter {
     @Override
     public String verifyGrantToken(String token) {
         try {
-            Algorithm algorithm = Algorithm.HMAC384(SHARE_SECRET_KEY);
-            return JWT.require(algorithm)
+            return JWT.require(getAlgorithm())
                     .build()
                     .verify(token)
                     .getIssuer();
